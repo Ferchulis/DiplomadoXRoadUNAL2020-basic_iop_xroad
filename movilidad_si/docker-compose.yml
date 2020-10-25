@@ -1,0 +1,10 @@
+version: "3.5"
+
+services:
+  sim_be:
+    build: .
+    entrypoint: ./docker-entrypoint.sh
+    volumes:
+      - .:/code
+    ports:
+      - "8000:8000"
