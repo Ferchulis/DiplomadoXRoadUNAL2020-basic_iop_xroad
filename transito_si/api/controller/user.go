@@ -44,6 +44,7 @@ func POSTUser(c *gin.Context) {
 	err := c.BindJSON(&user)
 	if err != nil {
 		c.AbortWithStatus(http.StatusInternalServerError)
+		print err
 		return
 	}
 
