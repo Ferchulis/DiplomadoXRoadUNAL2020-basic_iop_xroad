@@ -41,6 +41,8 @@ func GETUser(c *gin.Context) {
 
 func POSTUser(c *gin.Context) {
 	var user model.User
+	body, _ := ioutil.ReadAll(c.Request.Body)
+    println(string(body))
 	err := c.BindJSON(&user)
 	if err != nil {
 		c.AbortWithStatus(http.StatusInternalServerError)
