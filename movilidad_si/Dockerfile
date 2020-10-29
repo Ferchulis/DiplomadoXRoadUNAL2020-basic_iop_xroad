@@ -1,9 +1,15 @@
-FROM python:3
-ENV PYTHONUNBUFFERED=1
-RUN mkdir /code
-WORKDIR /code
-COPY ./movilidad_si/requirements.txt /code
-COPY ./movilidad_si/docker-entrypoint.sh /code
-RUN pip install -r requirements.txt
-COPY ./movilidad_si /code
-ENTRYPOINT [ "sh", "/code/docker-entrypoint.sh" ]
+#Image
+FROM node:latest
+
+#API Directory
+WORKDIR /usr/src/app
+
+COPY ./movilidad_si/package.json ./
+
+RUN npm install
+
+COPY ./movilidad_si ./
+
+EXPOSE 1005
+
+CMD ["npm", "run", "dev"]
