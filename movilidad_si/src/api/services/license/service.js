@@ -9,7 +9,7 @@ const createNewCitizenLicense = async(document, DocumentTypeId, runt_registry, e
     let response;
 
     if(exam === true){
-      if(document && DocumentTypeId && runt_registry && exam){
+      if(document && DocumentTypeId && String(runt_registry) && exam){
 
         let response;
 
