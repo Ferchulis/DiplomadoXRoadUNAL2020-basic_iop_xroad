@@ -21,7 +21,7 @@ public class DocumentType implements Serializable{
     public static final DocumentType CC = new DocumentType( 1, "Cédula de Ciudadanía", "CC" );
     public static final DocumentType TI = new DocumentType( 2, "Tarjeta de Identidad", "TI" );
     public static final DocumentType CE = new DocumentType( 3, "Cédula de Extrangería", "CE" );
-    public static final DocumentType NIUP = new DocumentType( 4, "Número Único de Identificación Personal", "NIUP" );
+    public static final DocumentType NUIP = new DocumentType( 4, "Número Único de Identificación Personal", "NUIP" );
 
 
 
@@ -51,7 +51,7 @@ public class DocumentType implements Serializable{
         if( CC.getCode( ).equals( code ) ) return CC;
         else if( TI.getCode( ).equals( code ) ) return TI;
         else if( CE.getCode( ).equals( code ) ) return CE;
-        else if( NIUP.getCode( ).equals( code ) ) return NIUP;
+        else if( NUIP.getCode( ).equals( code ) ) return NUIP;
         else return null;
     }
 
