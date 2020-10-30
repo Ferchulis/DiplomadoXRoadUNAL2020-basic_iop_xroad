@@ -90,7 +90,7 @@ services:
       context: .
       dockerfile: movilidad_si/Dockerfile
     ports:
-      - "1005:8000"
+      - "1005:1005"
     restart: unless-stopped
     networks:
       x-road-network:
