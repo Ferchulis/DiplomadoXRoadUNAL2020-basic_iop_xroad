@@ -64,11 +64,11 @@ func POSTUser(c *gin.Context) {
 }
 
 func PopulateDatabase(r repository.UserRepository) {
-	var user1 = model.User{Name: "Salvador",LastName: "Pastor Espinoza",DocumentNumber: "11036516300",DocumentType: "1"}
-	var user2 = model.User{Name: "Tomás",LastName: "Pérez Gil",DocumentNumber: "15129143371",DocumentType: "1"}
-	var user3 = model.User{Name: "Iván",LastName: "Rodríguez Tovar",DocumentNumber: "16337688",DocumentType: "2"}
-	var user4 = model.User{Name: "Nancy",LastName: "Tapia Árias",DocumentNumber: "10900945",DocumentType: "3"}
-	var user5 = model.User{Name: "Juan Pedro",LastName: "Sosa Vaquero",DocumentNumber: "11773819393",DocumentType: "4"}
+	var user1 = model.User{Name: "Salvador",LastName: "Pastor Espinoza",DocumentNumber: "11036516300",DocumentType: "CC"}
+	var user2 = model.User{Name: "Tomás",LastName: "Pérez Gil",DocumentNumber: "15129143371",DocumentType:CC"}
+	var user3 = model.User{Name: "Iván",LastName: "Rodríguez Tovar",DocumentNumber: "16337688",DocumentType: "TI"}
+	var user4 = model.User{Name: "Nancy",LastName: "Tapia Árias",DocumentNumber: "10900945",DocumentType: "CE"}
+	var user5 = model.User{Name: "Juan Pedro",LastName: "Sosa Vaquero",DocumentNumber: "11773819393",DocumentType: "NUIP"}
 
 	r.CreateTable()
 	r.CreateUser(user1)
